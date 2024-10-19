@@ -31,6 +31,27 @@ nav .navbar-list{
     z-index: 99;
     background-color: white;
 }
+
+
+nav .navbar-list .hideOnMobile .sub-list {
+    display: none;
+    position: absolute; 
+    right:10px;
+    bottom: -10px;
+    background-color: white; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    z-index: 10; 
+    width:140px;
+    animation: none;
+}
+
+
+nav .navbar-list .hideOnMobile:hover .sub-list {
+    display: block;
+}
  nav ul{
     width: 100%;
     display:flex;
@@ -53,6 +74,7 @@ nav ul li{
   margin:0px 10px 0px 10px;
   box-shadow: 1px 5px 8px blueviolet ;
 }
+
 @keyframes borderrotate{
     0%{
      border-color: #C39CFF ;
@@ -123,6 +145,7 @@ side bar
     background-color: rgb(130, 102, 169);
     border-radius: 15px;
 }
+
 .navbar .menu-button{
     display: none;
 }
