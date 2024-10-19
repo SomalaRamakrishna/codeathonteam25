@@ -205,13 +205,89 @@
         <section class="feedback-section" id="feedback">
             <div class="feedback-form">
                 <h2>Feedback Form</h2>
+                <form>
                 <textarea id="feedback1" placeholder="Enter Your Feedback"></textarea>
                 <br/>
-                <button type="submit" id="submit1">Submit <br\>Your<br\> Feedback</button>
-              </div>
+                <div class="rating" >
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 stars">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 stars">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 stars">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 stars">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 star">★</label>
+                </div>   <br/>
+                <button type="submit" id="submit1" >Submit <br\>Your<br\> Feedback</button>
+            </form>  
+            </div>
+            
         </section>
     </main>
+    
+    
    </center>
 	<script src="./src/script.js"></script>  
 </body>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getDatabase ,set,ref} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAU501dXSFeJI2KUoHLf-CJ2GQStT5waVY",
+      authDomain: "ramakrishna-ab79e.firebaseapp.com",
+      databaseURL: "https://ramakrishna-ab79e-default-rtdb.firebaseio.com",
+      projectId: "ramakrishna-ab79e",
+      storageBucket: "ramakrishna-ab79e.appspot.com",
+      messagingSenderId: "721466362531",
+      appId: "1:721466362531:web:476b080b80cafe3ecdcd16"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+    const signin=document.getElementById("signin");
+    signin.addEventListener('click',(e)=>{
+      e.preventDefault();
+      var email=document.getElementById('email').value;
+      var password=document.getElementById('password').value;
+      signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up 
+      const user = userCredential.user;
+      alert('Welcome!!!!');
+      window.location.href = "home.html";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+      
+    });
+    })
+  
+    
+
+    document.getElementById('submit1').addEventListener('click', function(e) {
+    e.preventDefault();
+    const fbtext = document.getElementById('feedback1').value;
+    const rating = document.querySelector('input[name="rating"]:checked').value;
+
+    alert('Your Feedback is stored as:'+fdtext);
+    alert('Your Rating :'+ rating);
+
+    // Here, you could send the feedback and rating to your backend (e.g., Firebase)
+});
+    
+  </script>
 </html>

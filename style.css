@@ -435,3 +435,29 @@ main .feedback-section{
         color: rgb(243, 22, 232)
     }
 }
+
+.rating {
+    display: inline-block;
+    direction: rtl; /* Displays stars from right to left */
+    border-bottom: 20px;
+  }
+  
+  .rating input {
+    display: none; /* Hide radio buttons */
+  }
+  
+  .rating label {
+    font-size: 2em; /* Adjust star size */
+    color: lightgray;
+    cursor: pointer;
+  }
+  
+  .rating input:checked ~ label {
+    color: rgb(229, 144, 7) /* Change the star color when selected */
+  }
+  
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: rgb(30, 245, 10); /* Change color on hover */
+  }
+  
