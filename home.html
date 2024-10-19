@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection and Teacher Assignment for University</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body >
+     <header>
+				<div class="container">
+					<nav class="navbar">
+						 <ul class="navbar-list">
+							<li class="hide-logo-style"><a href="#" class="logo">
+								<img src="./forntend/src/images/logo2.jpeg" alt="rgm logo">
+							</a></li>
+							<li class="hideOnMobile">
+								<a href="#home" class="navbar-link">Home</a>
+							</li>
+							<li class="hideOnMobile">
+								<a href="#courseSelection" class="navbar-link">Course Selection</a>
+							</li>
+		
+							
+							<li class="hideOnMobile">
+								<a href="#teacherSelection" class="navbar-link">Teacher Selection</a>
+							</li>
+		
+							<li class="hideOnMobile">
+								<a href="#feedback" class="navbar-link li" >Feedback</a>
+							</li>
+                            <li class="hideOnMobile">
+								<img src="./forntend/src/images/account_circle.png" width="29px"/>
+                                <ul className="sub-list">
+                                    <!-- <li><a href="#">Username</a></li>
+                                    <li><a href="#">ID:Number</a></li> -->
+                                 </ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+	</header> 
+   <center>
+    <main>
+        <!--Intro Home Part-->
+        <section class="intro-section" id="home">
+           <h1 class="h1-desc">Welcome</h1>
+           <img src="./forntend/src/images/image.jpg" width="50%" style="border: 2px solid rgb(222, 4, 117);">
+           <ul>
+            <li class="quotate" style="list-style-type:none;font-size: 20px; color:red">Hii,Students - Please choose courses and teachers for your semester.</li>
+            <li>Students select four theory courses and two lab courses.</li>
+            <li>See All teachers profiles with ratings, research, and patents carefully. </li>
+            <li>At the end ! You can also submit feedback on teachers.</li>
+         </ul>
+        </section>
+
+
+
+        <!--Course Selection Section-->
+        <section class="course-selection" id="courseSelection">
+            <h2 class="para">Select Your Courses</h2><br/>
+            <div class="student-section">
+                <form id="course-selection-form">
+                    <div class="course-group">
+                        <label for="theory1">Theory Course 1:</label>
+                        <select id="theory1">
+                            <option value="">Select Course</option>
+                            <option value="C">C</option>
+                            <option value="Python">Python</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="WebDevelopment">WebDevelopment</option>
+                            <option value="C#">C#</option>
+                        </select>
+                    </div>
+    
+                    <div class="course-group">
+                        <label for="theory2">Theory Course 2:</label>
+                        <select id="theory2">
+                            <option value="">Select Course</option>
+                            <option value="C">C</option>
+                            <option value="Python">Python</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="WebDevelopment">WebDevelopment</option>
+                            <option value="C#">C#</option>
+                        </select>
+                    </div>
+                    <div class="course-group">
+                        <label for="theory3">Theory Course 2:</label>
+                        <select id="theory3">
+                            <option value="">Select Course</option>
+                            <option value="C">C</option>
+                            <option value="Python">Python</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="WebDevelopment">WebDevelopment</option>
+                            <option value="C#">C#</option>
+                        </select>
+                    </div>
+                    <div class="course-group">
+                        <label for="theory4">Theory Course 2:</label>
+                        <select id="theory4">
+                            <option value="">Select Course</option>
+                            <option value="C">C</option>
+                            <option value="Python">Python</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="WebDevelopment">WebDevelopment</option>
+                            <option value="C#">C#</option>
+                        </select>
+                    </div>
+    
+                    <div class="course-group">
+                        <label for="lab1">Lab Course 1:</label>
+                        <select id="lab1">
+                            <option value="">Select Lab</option>
+                            <option value="Lab1">Computer Networks</option>
+                            <option value="Lab2">Operating System</option>
+                            <option value="Lab3">WebDevelopment</option>
+                        </select>
+                    </div>
+    
+                    <div class="course-group">
+                        <label for="lab2">Lab Course 2:</label>
+                        <select id="lab2">
+                            <option value="">Select Lab</option>
+                            <option value="Lab1">Computer Networks</option>
+                            <option value="Lab2">Operating System</option>
+                            <option value="Lab3">WebDevelopment</option>
+                        </select>
+                    </div>
+    
+                    <button type="submit" id="submit">Submit Your Selection</button>
+                </form>
+            </div>
+            </div>   
+        </section>
+
+        <!--Teacher Selection -->
+        <section class="teacher-selection" id="teacherSelection">
+            <div class="teacher-profile">
+                <h1>Teacher Profiles</h1>
+                <div class="teacher-section">
+                    <h2>Available Teachers</h2>
+                    <div class="teacher-list">
+                        <div class="teacher-card">
+                            <h3>Prof. John Doe</h3>
+                            <p><strong>Rating:</strong> 4.5/5</p>
+                            <p><strong>Research:</strong> AI, Machine Learning</p>
+                            <p><strong>Patents:</strong> Patent 1, Patent 2</p>
+                            <p><strong>Academic Background:</strong> PhD in Computer Science</p>
+                            <span><button>Choose Teacher</button></span> 
+                        </div>
+                        <div class="teacher-card">
+                            <h3>Prof. Jane Smith</h3>
+                            <p><strong>Rating:</strong> 4.8/5</p>
+                            <p><strong>Research:</strong> Cloud Computing</p>
+                            <p><strong>Patents:</strong> Patent 3, Patent 4</p>
+                            <p><strong>Academic Background:</strong> PhD in Information Security</p>
+                            <span><button>Choose Teacher</button></span> 
+                        </div>
+                        <div class="teacher-card">
+                            <h3>Prof. John Doe</h3>
+                            <p><strong>Rating:</strong> 4.5/5</p>
+                            <p><strong>Research:</strong> AI</p>
+                            <p><strong>Patents:</strong> Patent 1, Patent 2</p>
+                            <p><strong>Academic Background:</strong> PhD in Computer Science</p>
+                            <span><button>Choose Teacher</button></span> 
+                        </div>
+                        <div class="teacher-card">
+                            <h3>Prof. John Doe</h3>
+                            <p><strong>Rating:</strong> 4.5/5</p>
+                            <p><strong>Research:</strong> AI</p>
+                            <p><strong>Patents:</strong> Patent 1, Patent 2</p>
+                            <p><strong>Academic Background:</strong> PhD in Computer Science</p>
+                            <span><button>Choose Teacher</button></span> 
+                        </div>
+                        <div class="teacher-card">
+                            <h3>Prof. John Doe</h3>
+                            <p><strong>Rating:</strong> 4.5/5</p>
+                            <p><strong>Research:</strong> AI</p>
+                            <p><strong>Patents:</strong> Patent 1, Patent 2</p>
+                            <p><strong>Academic Background:</strong> PhD in Computer Science</p>
+                            <span><button>Choose Teacher</button></span> 
+                        </div>
+                        <div class="teacher-card">
+                            <h3>Prof. John Doe</h3>
+                            <p><strong>Rating:</strong> 4.5/5</p>
+                            <p><strong>Research:</strong> AI</p>
+                            <p><strong>Patents:</strong> Patent 1, Patent 2</p>
+                            <p><strong>Academic Background:</strong> PhD in Computer Science</p>
+                           <span><button>Choose Teacher</button></span> 
+                        </div>
+                        <!-- More teacher cards can be added here -->
+                    </div>
+                </div>
+            </section>
+              </div>
+        </section>
+
+
+
+        <!--Feedback Section-->
+        <section class="feedback-section" id="feedback">
+            <div class="feedback-form">
+                <h2>Feedback Form</h2>
+                <textarea id="feedback1" placeholder="Enter Your Feedback"></textarea>
+                <br/>
+                <button type="submit" id="submit1">Submit <br\>Your<br\> Feedback</button>
+              </div>
+        </section>
+    </main>
+   </center>
+	<script src="./src/script.js"></script>  
+</body>
+</html>

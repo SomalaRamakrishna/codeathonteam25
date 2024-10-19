@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Login</title>
+    <link rel="stylesheet" href="LoginCSS.css">
+    <style>
+      .logo img{
+    width:70px;
+    height:70px;  
+}
+nav{
+   
+   /*  background-color: blueviolet;  */
+    z-index: 500;
+    box-shadow: -10px 0 10px rgba(6, 6, 6, 0.227);
+    background-color: white;
+}
+nav .navbar-list{
+  margin: 0%;
+  padding-top: 0%;
+  /* 
+  border: 2px solid green; */
+    position: fixed;
+    z-index: 99;
+    background-color: white;
+}
+ nav ul{
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:0 20px;
+    color: rgb(8, 8, 8);
+}
+ 
+nav ul li{
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 650;
+    list-style-type: none;
+  
+  border: 2px solid #C39CFF;
+  border-radius: 5px;
+  animation: borderrotate 4s ease-in-out 1s infinite ;
+ transition: all ease;
+  margin:0px 30px 0px 30px;
+  box-shadow: 1px 5px 8px blueviolet ;
+}
+@keyframes borderrotate{
+    0%{
+     border-color: #C39CFF ;
+    }
+    25%{
+     border-color: rgb(252, 33, 161)  #47f503;
+    }
+    50%{
+     border-color: #09e2ed  #eeff00;
+    }
+    75%{
+     border-color: rgb(150, 8, 232) rgb(71, 7, 220) ;
+    } 
+    100%{
+        border-color: #C39CFF ;
+    }   
+ }
+nav ul .hide-logo-style{
+  border: none;
+  border-radius:none;
+  animation: none ;
+  margin-top:0px;
+  box-shadow:none ;
+
+}
+nav ul li a{
+    height:100%;
+    padding:5px 30px;
+    color:rgba(11, 7, 235, 0.515);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+nav a:hover{
+  color: rgb(146, 146, 38);
+}
+nav li:first-child{
+    margin-right:auto;
+}
+/*----------------------------------
+side bar
+------------------------------*/
+@media  (max-width:850px){
+    .hideOnMobile{
+        display: none;
+    }
+    .navbar .menu-button{
+        display: block;
+   
+    }
+}
+@media  (max-width:500px){
+    .sidebar{
+        width: 100%;
+    }
+    
+}
+@media (max-width:700px){
+    nav ul li:last-child{
+      list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 650;
+    list-style-type: none;
+  
+  border: 2px solid #C39CFF;
+  border-radius: 5px;
+  animation: borderrotate 4s ease-in-out 1s infinite ;
+ transition: all ease;
+  margin:0px 10px 0px 10px;
+  box-shadow: 1px 5px 8px blueviolet ;
+}
+@keyframes borderrotate{
+    0%{
+     border-color: #C39CFF ;
+    }
+    25%{
+     border-color: rgb(252, 33, 161)  #47f503;
+    }
+    50%{
+     border-color: #09e2ed  #eeff00;
+    }
+    75%{
+     border-color: rgb(150, 8, 232) rgb(71, 7, 220) ;
+    } 
+    100%{
+        border-color: #C39CFF ;
+    }   
+ 
+    }
+}
+
+
+.login{
+  padding-top: 70px;
+}
+.mainLogo{
+    background-color:#fff;
+    width: 100%;
+    height: 85vh;
+    background-image: url("istockphoto-1029210226-612x612.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1000px;
+    background-attachment: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inputsForLogo{
+    background-color: #C39CFF;
+    border-radius: 10px;
+    position:relative;
+    right:150px;
+    top:-15px;
+    width:350px;
+    height:430px;
+    transform: rotate(5deg);
+    animation-name:ram;
+    animation-duration:9s;
+    animation-iteration-count:infinite;
+    display: flex; 
+    justify-content: center; 
+  }
+  @keyframes ram{
+    0%{
+      background-color: #C39CFF;
+      opacity: 1;
+    }
+    50%{
+      background-color:#c49cffc1;
+      opacity: 0.5;
+    } 
+    100%{
+      background-color:#C39CFF;
+      opacity: 1;
+    }
+  }
+  .inputsForLogo form{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+  }
+  .inputsForLogo form img#logo-2{
+    border-radius: 100px;
+    border:5px outset #f8f9fa;
+    animation:logoRotate;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes logoRotate{
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .inputsForLogo form .username{
+    padding:20px;
+    height: 10px;
+  }
+  .submit{
+    transition: 0.5s;
+    letter-spacing: 6px;
+    padding:10px 40px;
+    border:2px solid #5c06dd
+  }
+  .submit:hover{
+    background-color:paleturquoise;
+    box-shadow: 1px 2px 5px paleturquoise,
+                 2px 4px 25px paleturquoise,
+                 3px 6px 50px paleturquoise,
+                 4px 8px 200px paleturquoise;
+    cursor: pointer;
+  }
+  .inputsForLogo form h6{
+  font-size: 1rem;
+  color:blue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #password{
+    padding:10px 60px;
+    border:1px solid paleturquoise;
+    border-radius:5px;
+  }
+  #email{
+    padding:10px 60px;
+    border:1px solid paleturquoise;
+    border-radius:5px;
+  }
+
+    </style>
+   
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+         <ul class="navbar-list">
+          <li class="hide-logo-style"><a href="#" class="logo">
+            <img src="./forntend/src/images/logo2.jpeg" alt="rgm logo">
+          </a></li>
+          <li class="hideOnMobile">
+            <a href="#home" class="navbar-link">Home</a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="#courseSelection" class="navbar-link">Course Selection</a>
+          </li>
+
+          
+          <li class="hideOnMobile">
+            <a href="#teacherSelection" class="navbar-link">Teacher Selection</a>
+          </li>
+
+          <li class="hideOnMobile">
+            <a href="#feedback" class="navbar-link li" >Feedback</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+</header> 
+<div class="login">
+    <div class="mainLogo">
+        <div class="logoComponent">
+            <div class="inputsForLogo">
+                <form name="userAuthentication" id="form1" action="index.html">
+                    <center>
+                        <img src="./forntend/src/images/welcome.jpeg" width="70" height="70" id="logo-2" alt="City Service Center Logo"/>
+                        <h6>City SERVICE CENTER</h6>
+                    </center>
+                    <div class="username">
+                        <input type="text" id="email" name="email" placeholder="Enter Email" required/>
+                    </div>
+                    <div class="username">
+                        <input type="password" id="password" name="password" placeholder="Enter Password"required/>
+                    </div>
+                    <div>
+                        <button type="submit"  id="signup" class="submit" >SignUp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+  import { getDatabase ,set,ref} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAU501dXSFeJI2KUoHLf-CJ2GQStT5waVY",
+    authDomain: "ramakrishna-ab79e.firebaseapp.com",
+    databaseURL: "https://ramakrishna-ab79e-default-rtdb.firebaseio.com",
+    projectId: "ramakrishna-ab79e",
+    storageBucket: "ramakrishna-ab79e.appspot.com",
+    messagingSenderId: "721466362531",
+    appId: "1:721466362531:web:476b080b80cafe3ecdcd16"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+  const signup=document.getElementById("signup");
+  signup.addEventListener('click',(e)=>{
+    e.preventDefault();
+    var email=document.getElementById('email').value;
+    var password=document.getElementById('password').value;
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    alert('user created !');
+    window.location.href = "home.html";
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+    
+  });
+  })
+
+  
+  
+</script>
+</html>
